@@ -17,9 +17,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     {%- endraw %}{% endif %}{% raw %}
 
-    <!-- Your stuff: Third-party CSS libraries go here -->
+    {% comment %}<!-- Your stuff: Third-party CSS libraries go here -->{% endcomment %}
     {%- endraw %}{% if cookiecutter.use_compressor == "y" %}{% raw %}{% compress css %}{% endraw %}{% endif %}{% raw %}
-    <!-- This file stores project-specific CSS -->
+    {% comment %}<!-- This file stores project-specific CSS -->{% endcomment %}
     {%- endraw %}{% if cookiecutter.js_task_runner == "Gulp" and cookiecutter.use_compressor == "n" %}{% raw %}
     <link href="{% static 'css/project.min.css' %}" rel="stylesheet">
     {%- endraw %}{% else %}{% raw %}
@@ -27,9 +27,10 @@
     {%- endraw %}{% endif %}{% raw %}
     {%- endraw %}{% if cookiecutter.use_compressor == "y" %}{% raw %}{% endcompress %}{% endraw %}{% endif %}{% raw %}
     {% endblock %}
-    <!-- Le javascript
-    ================================================== -->
+    {% comment %}
+    <!-- Le javascript ================================================== -->
     {# Placed at the top of the document so pages load faster with defer #}
+    {% endcomment %}
     {% block javascript %}
       {%- endraw %}{% if cookiecutter.custom_bootstrap_compilation == "y" and cookiecutter.js_task_runner == "Gulp" %}{% raw %}
       <!-- Vendor dependencies bundled as one file-->
@@ -53,50 +54,8 @@
 
   <body>
 
-    <div class="mb-1">
-      <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <div class="container-fluid">
-          <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <a class="navbar-brand" href="{% url 'home' %}">{% endraw %}{{ cookiecutter.project_name }}{% raw %}</a>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="{% url 'home' %}">Home <span class="visually-hidden">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'about' %}">About</a>
-              </li>
-              {% if request.user.is_authenticated %}
-                <li class="nav-item">
-                  {# URL provided by django-allauth/account/urls.py #}
-                  <a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{% translate "My Profile" %}</a>
-                </li>
-                <li class="nav-item">
-                  {# URL provided by django-allauth/account/urls.py #}
-                  <a class="nav-link" href="{% url 'account_logout' %}">{% translate "Sign Out" %}</a>
-                </li>
-              {% else %}
-                {% if ACCOUNT_ALLOW_REGISTRATION %}
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a id="sign-up-link" class="nav-link" href="{% url 'account_signup' %}">{% translate "Sign Up" %}</a>
-              </li>
-              {% endif %}
-                <li class="nav-item">
-                  {# URL provided by django-allauth/account/urls.py #}
-                  <a id="log-in-link" class="nav-link" href="{% url 'account_login' %}">{% translate "Sign In" %}</a>
-                </li>
-              {% endif %}
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-    </div>
-
+    {% include 'partials/_navbar.html' %}
+    
     <div class="container">
 
       {% if messages %}
