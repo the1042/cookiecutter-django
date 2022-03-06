@@ -26,6 +26,9 @@ flower==1.0.0  # https://github.com/mher/flower
 {%- if cookiecutter.use_async == 'y' %}
 uvicorn[standard]==0.17.5  # https://github.com/encode/uvicorn
 {%- endif %}
+{%- if cookiecutter.use_pypdftk == 'y' %}
+pypdftk==0.5  # https://github.com/revolunet/pypdftk
+{%- endif %}
 
 # Django
 # ------------------------------------------------------------------------------
