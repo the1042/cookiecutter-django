@@ -4,7 +4,7 @@
   "description": "Behold My Awesome Project!",
   "author_name": "The 1042 Group, LLC",
   "domain_name": "the1042.com",
-  "email": "{{ cookiecutter.author_name.lower()|replace(' ', '-') }}@example.com",
+  "email": "code@the1042.com",
   "version": "0.1.0",
   "open_source_license": [
     "MIT",
@@ -13,7 +13,10 @@
     "Apache Software License 2.0",
     "Not open source"
   ],
-  "timezone": "UTC",
+  "timezone": [
+    "America/New_York",
+    "UTC"
+  ],
   "windows": "n",
   "use_pycharm": "n",
   "use_docker": "y",
@@ -45,13 +48,13 @@
     "Other SMTP"
   ],
   "use_async": "n",
-  "use_drf": "n",
+  "use_drf": "y",
   "custom_bootstrap_compilation": "y",
   "use_compressor": "n",
   "use_celery": "n",
   "use_mailhog": "y",
   "use_sentry": "n",
-  "use_whitenoise": "n",
+  "use_whitenoise": "y",
   "use_heroku": "n",
   "ci_tool": [
     "None",
