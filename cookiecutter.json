@@ -2,9 +2,9 @@
   "project_name": "My Awesome Project",
   "project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_')|replace('.', '_')|trim() }}",
   "description": "Behold My Awesome Project!",
-  "author_name": "Daniel Roy Greenfeld",
-  "domain_name": "example.com",
-  "email": "{{ cookiecutter.author_name.lower()|replace(' ', '-') }}@example.com",
+  "author_name": "The 1042 Group, LLC",
+  "domain_name": "the1042.com",
+  "email": "code@the1042.com",
   "version": "0.1.0",
   "open_source_license": [
     "MIT",
@@ -13,10 +13,13 @@
     "Apache Software License 2.0",
     "Not open source"
   ],
-  "timezone": "UTC",
+  "timezone": [
+    "America/New_York",
+    "UTC"
+  ],
   "windows": "n",
   "use_pycharm": "n",
-  "use_docker": "n",
+  "use_docker": "y",
   "postgresql_version": [
     "14.1",
     "13.5",
@@ -48,10 +51,11 @@
     "Gulp"
   ],
   "use_celery": "n",
-  "use_mailhog": "n",
+  "use_mailhog": "y",
   "use_sentry": "n",
-  "use_whitenoise": "n",
+  "use_whitenoise": "y",
   "use_heroku": "n",
+  "use_pypdftk": "n",
   "ci_tool": [
     "None",
     "Travis",
