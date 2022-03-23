@@ -120,10 +120,6 @@ Answer the prompts with your own desired [options](http://cookiecutter-django.re
     4 - 11.14
     5 - 10.19
     Choose from 1, 2, 3, 4, 5 [1]: 1
-    Select js_task_runner:
-    1 - None
-    2 - Gulp
-    Choose from 1, 2 [1]: 2
     Select cloud_provider:
     1 - AWS
     2 - GCP
@@ -142,8 +138,11 @@ Answer the prompts with your own desired [options](http://cookiecutter-django.re
     Choose from 1, 2, 3, 4, 5, 6, 7, 8, 9 [1]: 1
     use_async [n]: n
     use_drf [n]: y
-    custom_bootstrap_compilation [n]: y
-    use_compressor [n]: n
+    Select frontend_pipeline:
+    1 - None
+    2 - Django Compressor
+    3 - Gulp
+    Choose from 1, 2, 3, 4 [1]: 1
     use_celery [n]: n
     use_mailhog [n]: y
     use_sentry [n]: n
@@ -238,8 +237,3 @@ experience better.
 -   [How to create a Django Application using Cookiecutter and Django 1.8](https://www.swapps.io/blog/how-to-create-a-django-application-using-cookiecutter-and-django-1-8/) - Sept. 12, 2015
 
 Have a blog or online publication? Write about your cookiecutter-django tips and tricks, then send us a pull request with the link.
-
-## Code of Conduct
-
-Everyone interacting in the Cookiecutter project's codebases, issue trackers, chat
-rooms, and mailing lists is expected to follow the [PyPA Code of Conduct](https://www.pypa.io/en/latest/code-of-conduct/).
