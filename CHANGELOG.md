@@ -3,6 +3,42 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 
 <!-- GENERATOR_PLACEHOLDER -->
 
+## 2022.09.29
+
+### Changed
+- Remove outdated &amp; optional Sendgrid settings from production config ([#3885](https://github.com/cookiecutter/cookiecutter-django/pull/3885))
+
+## 2022.09.27
+
+### Updated
+- Update sphinx to 5.2.2 ([#3884](https://github.com/cookiecutter/cookiecutter-django/pull/3884))
+
+## 2022.09.26
+
+### Updated
+- Update drf-spectacular to 0.24.2 ([#3882](https://github.com/cookiecutter/cookiecutter-django/pull/3882))
+- Update djangorestframework to 3.14.0 ([#3881](https://github.com/cookiecutter/cookiecutter-django/pull/3881))
+- Update django-debug-toolbar to 3.7.0 ([#3878](https://github.com/cookiecutter/cookiecutter-django/pull/3878))
+- Auto-update pre-commit hooks ([#3877](https://github.com/cookiecutter/cookiecutter-django/pull/3877))
+- Bump stefanzweifel/git-auto-commit-action from 4.14.1 to 4.15.0 ([#3880](https://github.com/cookiecutter/cookiecutter-django/pull/3880))
+- Update sphinx to 5.2.1 ([#3879](https://github.com/cookiecutter/cookiecutter-django/pull/3879))
+
+## 2022.09.24
+
+### Fixed
+- Remove `--no-deps` in pip wheels command of docs Dockerfile ([#3875](https://github.com/cookiecutter/cookiecutter-django/pull/3875))
+
+## 2022.09.23
+
+### Changed
+- Reload uvicorn on html file change ([#3866](https://github.com/cookiecutter/cookiecutter-django/pull/3866))
+- Mailjet default api url does not work out of the box ([#3871](https://github.com/cookiecutter/cookiecutter-django/pull/3871))
+### Updated
+- Auto-update pre-commit hooks ([#3872](https://github.com/cookiecutter/cookiecutter-django/pull/3872))
+- Update django-extensions to 3.2.1 ([#3867](https://github.com/cookiecutter/cookiecutter-django/pull/3867))
+- Update tox to 3.26.0 ([#3864](https://github.com/cookiecutter/cookiecutter-django/pull/3864))
+- Update drf-spectacular to 0.24.1 ([#3874](https://github.com/cookiecutter/cookiecutter-django/pull/3874))
+
 ## 2022.09.15
 
 ### Updated
