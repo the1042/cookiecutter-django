@@ -10,7 +10,7 @@ psycopg2-binary==2.9.5  # https://github.com/psycopg/psycopg2
 {%- if cookiecutter.use_async == 'y' or cookiecutter.use_celery == 'y' %}
 watchfiles==0.18.1  # https://github.com/samuelcolvin/watchfiles
 {%- endif %}
-django-sslserver==0.22 #https://github.com/teddziuba/django-sslserver
+django-sslserver==0.22 # https://github.com/teddziuba/django-sslserver
 
 # Testing
 # ------------------------------------------------------------------------------
