@@ -95,5 +95,6 @@ CELERY_TASK_ALWAYS_EAGER = True
 CELERY_TASK_EAGER_PROPAGATES = True
 
 {%- endif %}
-# Your stuff...
+# Use SSL in Development $ python manage.py runsslserver
 # ------------------------------------------------------------------------------
+INSTALLED_APPS += ["sslserver"] 
