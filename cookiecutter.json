@@ -49,7 +49,8 @@
   "frontend_pipeline": [
     "None",
     "Django Compressor",
-    "Gulp"
+    "Gulp",
+    "Webpack"
   ],
   "use_celery": "n",
   "use_mailhog": "y",

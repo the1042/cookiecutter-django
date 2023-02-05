@@ -706,6 +706,13 @@ Listed in alphabetical order.
     <td>dudanogueira</td>
   </tr>
   <tr>
+    <td>duffn</td>
+    <td>
+      <a href="https://github.com/duffn">duffn</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
     <td>Dónal Adams</td>
     <td>
       <a href="https://github.com/epileptic-fish">epileptic-fish</a>
@@ -1462,9 +1469,23 @@ Listed in alphabetical order.
     <td></td>
   </tr>
   <tr>
+    <td>Pamela Fox</td>
+    <td>
+      <a href="https://github.com/pamelafox">pamelafox</a>
+    </td>
+    <td>pamelafox</td>
+  </tr>
+  <tr>
     <td>Parbhat Puri</td>
     <td>
       <a href="https://github.com/parbhat">parbhat</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Patrick Tran</td>
+    <td>
+      <a href="https://github.com/theptrk">theptrk</a>
     </td>
     <td></td>
   </tr>
@@ -1563,6 +1584,13 @@ Listed in alphabetical order.
     <td>Richard Hajdu</td>
     <td>
       <a href="https://github.com/Tusky">Tusky</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Robin</td>
+    <td>
+      <a href="https://github.com/Kaffeetasse">Kaffeetasse</a>
     </td>
     <td></td>
   </tr>
@@ -1707,9 +1735,23 @@ Listed in alphabetical order.
     <td>thibault</td>
   </tr>
   <tr>
+    <td>Thomas Booij</td>
+    <td>
+      <a href="https://github.com/ThomasBooij95">ThomasBooij95</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
     <td>Théo Segonds</td>
     <td>
       <a href="https://github.com/show0k">show0k</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>tildebox</td>
+    <td>
+      <a href="https://github.com/tildebox">tildebox</a>
     </td>
     <td></td>
   </tr>
