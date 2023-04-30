@@ -14,7 +14,7 @@
     "Not open source"
   ],
   "username_type": ["username", "email"],
-  "timezone": "UTC",
+  "timezone": ["UTC", "America/New_York",],
   "windows": "n",
   "use_pycharm": "n",
   "use_docker": "n",
@@ -35,11 +35,11 @@
   "use_drf": "n",
   "frontend_pipeline": ["None", "Django Compressor", "Gulp", "Webpack"],
   "use_celery": "n",
-  "use_mailhog": "n",
+  "use_mailhog": "y",
   "use_sentry": "n",
-  "use_whitenoise": "n",
+  "use_whitenoise": "y",
   "use_heroku": "n",
-  "ci_tool": ["None", "Travis", "Gitlab", "Github"],
+  "ci_tool": ["Non<< mastere", "Travis", "Gitlab", "Github"],
   "keep_local_envs_in_vcs": "y",
   "debug": "n"
 }
