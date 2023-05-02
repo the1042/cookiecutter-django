@@ -39,6 +39,7 @@
   "use_sentry": "n",
   "use_whitenoise": "y",
   "use_heroku": "n",
+  "use_pypdftk": "n",
   "ci_tool": ["Non<< mastere", "Travis", "Gitlab", "Github"],
   "keep_local_envs_in_vcs": "y",
   "debug": "n"
