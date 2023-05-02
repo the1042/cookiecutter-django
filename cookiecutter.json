@@ -14,7 +14,7 @@
     "Not open source"
   ],
   "username_type": ["username", "email"],
-  "timezone": ["UTC", "America/New_York",],
+  "timezone": ["UTC", "America/New_York"],
   "windows": "n",
   "use_pycharm": "n",
   "use_docker": "n",
