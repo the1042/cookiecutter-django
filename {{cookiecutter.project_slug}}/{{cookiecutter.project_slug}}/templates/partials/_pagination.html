@@ -1,0 +1,31 @@
+{% raw %}{% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% if page_obj.paginator.num_pages > 1 %}
+<nav aria-label="Pagination">
+  <ul class="pagination">
+    {% if page_obj.has_previous %}
+      <li class="page-item"><a class="page-link" href="{{ request.path }}?page=1">{% translate "First" %}</a></li>
+      <li class="page-item"><a class="page-link" href="{{ request.path }}?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+    {% else %}
+      <li class="disabled page-item"><a class="page-link">{% translate "First" %}</a></li>
+      <li class="disabled page-item"><a class="page-link">&laquo;</a></li>
+    {% endif %}
+    {% for p in page_obj.paginator %}
+      {% if page_obj.number == p.number %}
+        <li class="page-item active"><a class="page-link">{{ p.number }}</a></li>
+      {% else %}
+      <li class="page-item"><a class="page-link" href="{{ request.path }}?page={{ p.number }}">{{ p.number }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if page_obj.has_next %}
+      <li class="page-item"><a class="page-link" href="{{ request.path }}?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+      <li class="page-item"><a class="page-link" href="{{ request.path }}?page={{ page_obj.paginator.num_pages }}">{% translate "Last" %}</a></li>
+    {% else %}
+      <li class="disabled page-item"><a class="page-link">&raquo;</a></li>
+      <li class="disabled page-item"><a class="page-link">{% translate "Last" %}</a></li>
+    {% endif %}
+  </ul>
+</nav>    
+{% endif %}
+{% endraw %}

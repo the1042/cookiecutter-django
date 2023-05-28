@@ -6,7 +6,7 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
 [![Updates](https://pyup.io/repos/github/cookiecutter/cookiecutter-django/shield.svg)](https://pyup.io/repos/github/cookiecutter/cookiecutter-django/)
-[![Join our Discord](https://img.shields.io/badge/Discord-cookiecutter-5865F2?style=flat&logo=discord&logoColor=white)](https://discord.gg/uFXweDQc5a)
+[![Join our Discord](https://img.shields.io/badge/Discord-cookiecutter-5865F2?style=flat&logo=discord&logoColor=white)](https://discord.gg/9BrxzPKuEW)
 [![Code Helpers Badge](https://www.codetriage.com/cookiecutter/cookiecutter-django/badges/users.svg)](https://www.codetriage.com/cookiecutter/cookiecutter-django)
 
 Powered by [Cookiecutter](https://github.com/cookiecutter/cookiecutter), Cookiecutter Django is a framework for jumpstarting
@@ -66,16 +66,10 @@ Projects that provide financial support to the maintainers:
 
 ---
 
-<p align="center">
-  <a href="https://www.feldroy.com/products//two-scoops-of-django-3-x"><img src="https://cdn.shopify.com/s/files/1/0304/6901/products/Two-Scoops-of-Django-3-Alpha-Cover_540x_26507b15-e489-470b-8a97-02773dd498d1_1080x.jpg"></a>
-</p>
-
-Two Scoops of Django 3.x is the best ice cream-themed Django reference in the universe!
-
 ### PyUp
 
 <p align="center">
-  <a href="https://pyup.io/"><img src="https://pyup.io/static/images/logo.png"></a>
+  <a href="https://pyup.io/">PyUp</a>
 </p>
 
 PyUp brings you automated security and dependency updates used by Google and other organizations. Free for open source projects!
@@ -91,11 +85,10 @@ First, get Cookiecutter. Trust me, it's awesome:
 
 Now run it against this repo:
 
-    $ cookiecutter https://github.com/cookiecutter/cookiecutter-django
+    $ cookiecutter https://github.com/the1042/cookiecutter-django --checkout dev
 
 You'll be prompted for some values. Provide them, then a Django project will be created for you.
 
-**Warning**: After this point, change 'Daniel Greenfeld', 'pydanny', etc to your own information.
 
 Answer the prompts with your own desired [options](http://cookiecutter-django.readthedocs.io/en/latest/project-generation-options.html). For example:
 
@@ -108,9 +101,9 @@ Answer the prompts with your own desired [options](http://cookiecutter-django.re
     project_name [My Awesome Project]: Reddit Clone
     project_slug [reddit_clone]: reddit
     description [Behold My Awesome Project!]: A reddit clone.
-    author_name [Daniel Roy Greenfeld]: Daniel Greenfeld
-    domain_name [example.com]: myreddit.com
-    email [daniel-greenfeld@example.com]: pydanny@gmail.com
+    author_name [the1042]: the1042
+    domain_name [the1042.com]:
+    email [code@the1042.com:
     version [0.1.0]: 0.0.1
     Select open_source_license:
     1 - MIT
@@ -125,8 +118,8 @@ Answer the prompts with your own desired [options](http://cookiecutter-django.re
     Choose from 1, 2 [1]: 1
     timezone [UTC]: America/Los_Angeles
     windows [n]: n
-    use_pycharm [n]: y
-    use_docker [n]: n
+    use_pycharm [n]: n
+    use_docker [y]: y
     Select postgresql_version:
     1 - 14
     2 - 13
@@ -138,7 +131,7 @@ Answer the prompts with your own desired [options](http://cookiecutter-django.re
     1 - AWS
     2 - GCP
     3 - None
-    Choose from 1, 2, 3 [1]: 1
+    Choose from 1, 2, 3 [1]: 3
     Select mail_service:
     1 - Mailgun
     2 - Amazon SES
@@ -158,11 +151,11 @@ Answer the prompts with your own desired [options](http://cookiecutter-django.re
     3 - Gulp
     4 - Webpack
     Choose from 1, 2, 3, 4 [1]: 1
-    use_celery [n]: y
-    use_mailhog [n]: n
-    use_sentry [n]: y
-    use_whitenoise [n]: n
-    use_heroku [n]: y
+    use_celery [n]: n
+    use_mailhog [n]: y
+    use_sentry [n]: n
+    use_whitenoise [n]: y
+    use_heroku [n]: n
     Select ci_tool:
     1 - None
     2 - Travis

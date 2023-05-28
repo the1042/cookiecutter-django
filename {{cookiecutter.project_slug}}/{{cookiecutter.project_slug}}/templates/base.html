@@ -39,9 +39,10 @@
     {% render_bundle 'project' 'css' %}
     {%- endraw %}{% endif %}{% raw %}
     {% endblock %}
-    <!-- Le javascript
-    ================================================== -->
+    {% comment %}
+    <!-- Le javascript ================================================== -->
     {# Placed at the top of the document so pages load faster with defer #}
+    {% endcomment %}
     {% block javascript %}
       {%- endraw %}{% if cookiecutter.frontend_pipeline == 'Gulp' %}{% raw %}
       <!-- Vendor dependencies bundled as one file -->
@@ -73,7 +74,6 @@
   </head>
 
   <body>
-
     <div class="mb-1">
       <nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container-fluid">
@@ -116,7 +116,6 @@
       </nav>
 
     </div>
-
     <div class="container">
 
       {% if messages %}
