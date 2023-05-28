@@ -17,7 +17,8 @@ admin.site.site_title = "{{ cookiecutter.project_name }} Admin Portal"
 # admin.site.index_title = "Welcome to {{ cookiecutter.project_name }} Admin Portal"
 
 urlpatterns = [
-    path("", include("{{ cookiecutter.project_slug }}.pages.urls")),
+    path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
+    path("about/", TemplateView.as_view(template_name="pages/about.html"), name="about"),
     # Django Admin, use {% raw %}{% url 'admin:index' %}{% endraw %}
     path(settings.ADMIN_URL, admin.site.urls),
     # User management
