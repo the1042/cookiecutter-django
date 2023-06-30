@@ -132,7 +132,7 @@ function initBrowserSync() {
       {%- if cookiecutter.use_docker == 'y' %}
       // https://www.browsersync.io/docs/options/#option-open
       // Disable as it doesn't work from inside a container
-      open: false,
+      // open: false,
       {%- endif %}
       // https://www.browsersync.io/docs/options/#option-proxy
       proxy: {
