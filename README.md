@@ -108,15 +108,15 @@ Answer the prompts with your own desired [options](http://cookiecutter-django.re
 
 Enter the project and take a look around:
 
-    $ cd reddit/
+    $ cd
     $ ls
 
 Create a git repo and push it there:
 
     $ git init
     $ git add .
-    $ git commit -m "first awesome commit"
-    $ git remote add origin git@github.com:pydanny/redditclone.git
+    $ git commit -m "first commit"
+    $ git remote add origin git@github.com:the1042/
     $ git push -u origin master
 
 Now take a look at your repo. Don't forget to carefully look at the generated README. Awesome, right?
