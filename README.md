@@ -22,7 +22,7 @@ production-ready Django projects quickly.
 
 Repo:
 
-    $ cookiecutter https://github.com/the1042/cookiecutter-django --checkout 1042
+    cookiecutter https://github.com/the1042/cookiecutter-django --checkout 1042
 
 You'll be prompted for some values. Provide them, then a Django project will be created for you.
 
