@@ -17,86 +17,14 @@ production-ready Django projects quickly.
 - If you have problems with Cookiecutter Django, please open [issues](https://github.com/cookiecutter/cookiecutter-django/issues/new) don't send
   emails to the maintainers.
 
-## Features
-
-- For Django 4.2
-- Works with Python 3.11
-- Renders Django projects with 100% starting test coverage
-- Twitter [Bootstrap](https://github.com/twbs/bootstrap) v5
-- [12-Factor](https://12factor.net) based settings via [django-environ](https://github.com/joke2k/django-environ)
-- Secure by default. We believe in SSL.
-- Optimized development and production settings
-- Registration via [django-allauth](https://github.com/pennersr/django-allauth)
-- Comes with custom user model ready to go
-- Optional basic ASGI setup for Websockets
-- Optional custom static build using Gulp or Webpack
-- Send emails via [Anymail](https://github.com/anymail/django-anymail) (using [Mailgun](http://www.mailgun.com/) by default or Amazon SES if AWS is selected cloud provider, but switchable)
-- Media storage using Amazon S3, Google Cloud Storage, Azure Storage or nginx
-- Docker support using [docker-compose](https://github.com/docker/compose) for development and production (using [Traefik](https://traefik.io/) with [LetsEncrypt](https://letsencrypt.org/) support)
-- [Procfile](https://devcenter.heroku.com/articles/procfile) for deploying to Heroku
-- Instructions for deploying to [PythonAnywhere](https://www.pythonanywhere.com/)
-- Run tests with unittest or pytest
-- Customizable PostgreSQL version
-- Default integration with [pre-commit](https://github.com/pre-commit/pre-commit) for identifying simple issues before submission to code review
-
-## Optional Integrations
-
-_These features can be enabled during initial project setup._
-
-- Serve static files from Amazon S3, Google Cloud Storage, Azure Storage or [Whitenoise](https://whitenoise.readthedocs.io/)
-- Configuration for [Celery](https://docs.celeryq.dev) and [Flower](https://github.com/mher/flower) (the latter in Docker setup only)
-- Integration with [Mailpit](https://github.com/axllent/mailpit/) for local email testing
-- Integration with [Sentry](https://sentry.io/welcome/) for error logging
-
-## Constraints
-
-- Only maintained 3rd party libraries are used.
-- Uses PostgreSQL everywhere: 10 - 15 ([MySQL fork](https://github.com/mabdullahadeel/cookiecutter-django-mysql) also available).
-- Environment variables for configuration (This won't work with Apache/mod_wsgi).
-
-## Support this Project!
-
-This project is an open source project run by volunteers. You can sponsor us via [OpenCollective](https://opencollective.com/cookiecutter-django) or individually via GitHub Sponsors:
-
-- Daniel Roy Greenfeld, Project Lead ([GitHub](https://github.com/pydanny), [Patreon](https://www.patreon.com/danielroygreenfeld)): expertise in Django and AWS ELB.
-- Fabio C. Barrionuevo, Core Developer ([GitHub](https://github.com/luzfcb)): expertise in Python/Django, hands-on DevOps and frontend experience.
-- Bruno Alla, Core Developer ([GitHub](https://github.com/browniebroke)): expertise in Python/Django and DevOps.
-- Nikita Shupeyko, Core Developer ([GitHub](https://github.com/webyneter)): expertise in Python/Django, hands-on DevOps and frontend experience.
-
-Projects that provide financial support to the maintainers:
-
----
-
-<p align="center">
-  <a href="https://www.feldroy.com/products//two-scoops-of-django-3-x"><img src="https://cdn.shopify.com/s/files/1/0304/6901/products/Two-Scoops-of-Django-3-Alpha-Cover_540x_26507b15-e489-470b-8a97-02773dd498d1_1080x.jpg"></a>
-</p>
-
-Two Scoops of Django 3.x is the best ice cream-themed Django reference in the universe!
-
-### PyUp
-
-<p align="center">
-  <a href="https://pyup.io/"><img src="https://pyup.io/static/images/logo.png"></a>
-</p>
-
-PyUp brings you automated security and dependency updates used by Google and other organizations. Free for open source projects!
-
 ## Usage
 
-Let's pretend you want to create a Django project called "redditclone". Rather than using `startproject`
-and then editing the results to include your name, email, and various configuration issues that always get forgotten until the worst possible moment, get [cookiecutter](https://github.com/cookiecutter/cookiecutter) to do all the work.
 
-First, get Cookiecutter. Trust me, it's awesome:
+Repo:
 
-    $ pip install "cookiecutter>=1.7.0"
-
-Now run it against this repo:
-
-    $ cookiecutter https://github.com/cookiecutter/cookiecutter-django
+    $ cookiecutter https://github.com/the1042/cookiecutter-django --checkout 1042
 
 You'll be prompted for some values. Provide them, then a Django project will be created for you.
-
-**Warning**: After this point, change 'Daniel Greenfeld', 'pydanny', etc to your own information.
 
 Answer the prompts with your own desired [options](http://cookiecutter-django.readthedocs.io/en/latest/project-generation-options.html). For example:
 
@@ -109,9 +37,9 @@ Answer the prompts with your own desired [options](http://cookiecutter-django.re
     project_name [My Awesome Project]: Reddit Clone
     project_slug [reddit_clone]: reddit
     description [Behold My Awesome Project!]: A reddit clone.
-    author_name [Daniel Roy Greenfeld]: Daniel Greenfeld
+    author_name [the1042]: The 1042 Group, LLC
     domain_name [example.com]: myreddit.com
-    email [daniel-greenfeld@example.com]: pydanny@gmail.com
+    email [code@the1042.com]: code@the1042.com
     version [0.1.0]: 0.0.1
     Select open_source_license:
     1 - MIT
@@ -197,6 +125,72 @@ For local development, see the following:
 
 - [Developing locally](http://cookiecutter-django.readthedocs.io/en/latest/developing-locally.html)
 - [Developing locally using docker](http://cookiecutter-django.readthedocs.io/en/latest/developing-locally-docker.html)
+
+
+
+## Features
+
+- For Django 4.2
+- Works with Python 3.11
+- Renders Django projects with 100% starting test coverage
+- Twitter [Bootstrap](https://github.com/twbs/bootstrap) v5
+- [12-Factor](https://12factor.net) based settings via [django-environ](https://github.com/joke2k/django-environ)
+- Secure by default. We believe in SSL.
+- Optimized development and production settings
+- Registration via [django-allauth](https://github.com/pennersr/django-allauth)
+- Comes with custom user model ready to go
+- Optional basic ASGI setup for Websockets
+- Optional custom static build using Gulp or Webpack
+- Send emails via [Anymail](https://github.com/anymail/django-anymail) (using [Mailgun](http://www.mailgun.com/) by default or Amazon SES if AWS is selected cloud provider, but switchable)
+- Media storage using Amazon S3, Google Cloud Storage, Azure Storage or nginx
+- Docker support using [docker-compose](https://github.com/docker/compose) for development and production (using [Traefik](https://traefik.io/) with [LetsEncrypt](https://letsencrypt.org/) support)
+- [Procfile](https://devcenter.heroku.com/articles/procfile) for deploying to Heroku
+- Instructions for deploying to [PythonAnywhere](https://www.pythonanywhere.com/)
+- Run tests with unittest or pytest
+- Customizable PostgreSQL version
+- Default integration with [pre-commit](https://github.com/pre-commit/pre-commit) for identifying simple issues before submission to code review
+
+## Optional Integrations
+
+_These features can be enabled during initial project setup._
+
+- Serve static files from Amazon S3, Google Cloud Storage, Azure Storage or [Whitenoise](https://whitenoise.readthedocs.io/)
+- Configuration for [Celery](https://docs.celeryq.dev) and [Flower](https://github.com/mher/flower) (the latter in Docker setup only)
+- Integration with [Mailpit](https://github.com/axllent/mailpit/) for local email testing
+- Integration with [Sentry](https://sentry.io/welcome/) for error logging
+
+## Constraints
+
+- Only maintained 3rd party libraries are used.
+- Uses PostgreSQL everywhere: 10 - 15 ([MySQL fork](https://github.com/mabdullahadeel/cookiecutter-django-mysql) also available).
+- Environment variables for configuration (This won't work with Apache/mod_wsgi).
+
+## Support this Project!
+
+This project is an open source project run by volunteers. You can sponsor us via [OpenCollective](https://opencollective.com/cookiecutter-django) or individually via GitHub Sponsors:
+
+- Daniel Roy Greenfeld, Project Lead ([GitHub](https://github.com/pydanny), [Patreon](https://www.patreon.com/danielroygreenfeld)): expertise in Django and AWS ELB.
+- Fabio C. Barrionuevo, Core Developer ([GitHub](https://github.com/luzfcb)): expertise in Python/Django, hands-on DevOps and frontend experience.
+- Bruno Alla, Core Developer ([GitHub](https://github.com/browniebroke)): expertise in Python/Django and DevOps.
+- Nikita Shupeyko, Core Developer ([GitHub](https://github.com/webyneter)): expertise in Python/Django, hands-on DevOps and frontend experience.
+
+Projects that provide financial support to the maintainers:
+
+---
+
+<p align="center">
+  <a href="https://www.feldroy.com/products//two-scoops-of-django-3-x"><img src="https://cdn.shopify.com/s/files/1/0304/6901/products/Two-Scoops-of-Django-3-Alpha-Cover_540x_26507b15-e489-470b-8a97-02773dd498d1_1080x.jpg"></a>
+</p>
+
+Two Scoops of Django 3.x is the best ice cream-themed Django reference in the universe!
+
+### PyUp
+
+<p align="center">
+  <a href="https://pyup.io/"><img src="https://pyup.io/static/images/logo.png"></a>
+</p>
+
+PyUp brings you automated security and dependency updates used by Google and other organizations. Free for open source projects!
 
 ## Community
 
