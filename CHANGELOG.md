@@ -3,6 +3,29 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 
 <!-- GENERATOR_PLACEHOLDER -->
 
+## 2023.10.26
+
+
+### Updated
+
+- Update django-anymail to 10.2 ([#4645](https://github.com/cookiecutter/cookiecutter-django/pull/4645))
+
+## 2023.10.24
+
+
+### Updated
+
+- Update black to 23.10.1 ([#4639](https://github.com/cookiecutter/cookiecutter-django/pull/4639))
+
+- Auto-update pre-commit hooks ([#4641](https://github.com/cookiecutter/cookiecutter-django/pull/4641))
+
+## 2023.10.23
+
+
+### Updated
+
+- Update pylint-django to 2.5.5 ([#4638](https://github.com/cookiecutter/cookiecutter-django/pull/4638))
+
 ## 2023.10.19
 
 
