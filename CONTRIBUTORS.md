@@ -832,6 +832,13 @@ Listed in alphabetical order.
     <td></td>
   </tr>
   <tr>
+    <td>Freddy</td>
+    <td>
+      <a href="https://github.com/Hraesvelg">Hraesvelg</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
     <td>Fuzzwah</td>
     <td>
       <a href="https://github.com/Fuzzwah">Fuzzwah</a>
@@ -870,6 +877,13 @@ Listed in alphabetical order.
     <td>Gilbishkosma</td>
     <td>
       <a href="https://github.com/Gilbishkosma">Gilbishkosma</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>GitBib</td>
+    <td>
+      <a href="https://github.com/GitBib">GitBib</a>
     </td>
     <td></td>
   </tr>
@@ -1647,6 +1661,13 @@ Listed in alphabetical order.
     <td>PJ Hoberman</td>
     <td>
       <a href="https://github.com/pjhoberman">pjhoberman</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Plurific</td>
+    <td>
+      <a href="https://github.com/paulschwenn">paulschwenn</a>
     </td>
     <td></td>
   </tr>
