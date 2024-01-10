@@ -3,6 +3,51 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 
 <!-- GENERATOR_PLACEHOLDER -->
 
+## 2024.01.09
+
+
+### Documentation
+
+- Update allauth settings documentation links ([#4769](https://github.com/cookiecutter/cookiecutter-django/pull/4769))
+
+### Updated
+
+- Update django-allauth to 0.60.0 ([#4776](https://github.com/cookiecutter/cookiecutter-django/pull/4776))
+
+- Update psycopg to 3.1.17 ([#4777](https://github.com/cookiecutter/cookiecutter-django/pull/4777))
+
+## 2024.01.05
+
+
+### Updated
+
+- Auto-update pre-commit hooks ([#4774](https://github.com/cookiecutter/cookiecutter-django/pull/4774))
+
+- Update flake8 to 7.0.0 ([#4775](https://github.com/cookiecutter/cookiecutter-django/pull/4775))
+
+## 2024.01.02
+
+
+### Updated
+
+- Update psycopg to 3.1.16 ([#4753](https://github.com/cookiecutter/cookiecutter-django/pull/4753))
+
+- Update djlint to 1.34.1 ([#4773](https://github.com/cookiecutter/cookiecutter-django/pull/4773))
+
+- Update uvicorn to 0.25.0 ([#4760](https://github.com/cookiecutter/cookiecutter-django/pull/4760))
+
+- Auto-update pre-commit hooks ([#4749](https://github.com/cookiecutter/cookiecutter-django/pull/4749))
+
+- Update black to 23.12.1 ([#4772](https://github.com/cookiecutter/cookiecutter-django/pull/4772))
+
+- Update pillow to 10.2.0 ([#4770](https://github.com/cookiecutter/cookiecutter-django/pull/4770))
+
+- Update django to 4.2.9 ([#4771](https://github.com/cookiecutter/cookiecutter-django/pull/4771))
+
+- Update pytest to 7.4.4 ([#4767](https://github.com/cookiecutter/cookiecutter-django/pull/4767))
+
+- Update coverage to 7.4.0 ([#4764](https://github.com/cookiecutter/cookiecutter-django/pull/4764))
+
 ## 2023.12.19
 
 
