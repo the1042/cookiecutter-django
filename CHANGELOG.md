@@ -3,6 +3,62 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 
 <!-- GENERATOR_PLACEHOLDER -->
 
+## 2024.01.19
+
+
+### Updated
+
+- Update drf-spectacular to 0.27.1 ([#4797](https://github.com/cookiecutter/cookiecutter-django/pull/4797))
+
+## 2024.01.17
+
+
+### Changed
+
+- Add a test to cover `DJANGO_ADMIN_FORCE_ALLAUTH` ([#4790](https://github.com/cookiecutter/cookiecutter-django/pull/4790))
+
+### Updated
+
+- Bump webpack-bundle-tracker to 3.0.1 ([#4781](https://github.com/cookiecutter/cookiecutter-django/pull/4781))
+
+- Update django-webpack-loader to 3.0.1 ([#4793](https://github.com/cookiecutter/cookiecutter-django/pull/4793))
+
+- Bump postcss-loader to 8.0.0 ([#4795](https://github.com/cookiecutter/cookiecutter-django/pull/4795))
+
+- Update uvicorn to 0.26.0 ([#4794](https://github.com/cookiecutter/cookiecutter-django/pull/4794))
+
+## 2024.01.16
+
+
+### Updated
+
+- Bump sass-loader from 13.3.3 to 14.0.0 in /{{cookiecutter.project_slug}} ([#4791](https://github.com/cookiecutter/cookiecutter-django/pull/4791))
+
+## 2024.01.15
+
+
+### Documentation
+
+- Update allauth documentation links ([#4786](https://github.com/cookiecutter/cookiecutter-django/pull/4786))
+
+### Updated
+
+- Update django-allauth to 0.60.1 ([#4787](https://github.com/cookiecutter/cookiecutter-django/pull/4787))
+
+## 2024.01.11
+
+
+### Updated
+
+- Update jinja2 to 3.1.3 ([#4784](https://github.com/cookiecutter/cookiecutter-django/pull/4784))
+
+## 2024.01.10
+
+
+### Updated
+
+- Update sentry-sdk to 1.39.2 ([#4782](https://github.com/cookiecutter/cookiecutter-django/pull/4782))
+
 ## 2024.01.09
 
 
