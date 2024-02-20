@@ -3,6 +3,31 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 
 <!-- GENERATOR_PLACEHOLDER -->
 
+## 2024.02.19
+
+
+### Updated
+
+- Update sentry-sdk to 1.40.5 ([#4876](https://github.com/cookiecutter/cookiecutter-django/pull/4876))
+
+## 2024.02.17
+
+
+### Updated
+
+- Update pytest to 8.0.1 ([#4870](https://github.com/cookiecutter/cookiecutter-django/pull/4870))
+
+## 2024.02.16
+
+
+### Changed
+
+- Speed up GitHub CI for Docker setup ([#4863](https://github.com/cookiecutter/cookiecutter-django/pull/4863))
+
+### Documentation
+
+- Add link to the ruff repository in requirements ([#4866](https://github.com/cookiecutter/cookiecutter-django/pull/4866))
+
 ## 2024.02.13
 
 
