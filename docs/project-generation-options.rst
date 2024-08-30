@@ -66,11 +66,12 @@ use_docker:
 postgresql_version:
     Select a PostgreSQL_ version to use. The choices are:
 
-    1. 16
-    2. 15
-    3. 14
-    4. 13
-    5. 12
+    1. 15
+    2. 14
+    3. 13
+    4. 12
+    5. 11
+    6. 10
 
 cloud_provider:
     Select a cloud provider for static & media files. The choices are:
@@ -91,7 +92,7 @@ mail_service:
     4. Mandrill_
     5. Postmark_
     6. SendGrid_
-    7. `Brevo (formerly SendinBlue)`_
+    7. SendinBlue_
     8. SparkPost_
     9. `Other SMTP`_
 
@@ -174,7 +175,7 @@ debug:
 .. _Mandrill: http://mandrill.com
 .. _Postmark: https://postmarkapp.com
 .. _SendGrid: https://sendgrid.com
-.. _Brevo (formerly SendinBlue): https://www.brevo.com
+.. _SendinBlue: https://www.sendinblue.com
 .. _SparkPost: https://www.sparkpost.com
 .. _Other SMTP: https://anymail.readthedocs.io/en/stable/
 

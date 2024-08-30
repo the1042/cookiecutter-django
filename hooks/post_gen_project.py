@@ -8,7 +8,6 @@ NOTE:
 TODO: restrict Cookiecutter Django project initialization to
       Python 3.x environments only
 """
-
 from __future__ import print_function
 
 import json
@@ -78,11 +77,7 @@ def remove_docker_files():
     shutil.rmtree(".devcontainer")
     shutil.rmtree("compose")
 
-    file_names = [
-        "docker-compose.local.yml",
-        "docker-compose.production.yml",
-        ".dockerignore",
-    ]
+    file_names = ["local.yml", "production.yml", ".dockerignore"]
     for file_name in file_names:
         os.remove(file_name)
     if "{{ cookiecutter.editor }}" == "PyCharm":
@@ -434,6 +429,10 @@ def remove_drf_starter_files():
     os.remove(os.path.join("{{cookiecutter.project_slug}}", "users", "tests", "test_swagger.py"))
 
 
+def remove_storages_module():
+    os.remove(os.path.join("{{cookiecutter.project_slug}}", "utils", "storages.py"))
+
+
 def main():
     debug = "{{ cookiecutter.debug }}".lower() == "y"
 
@@ -500,6 +499,7 @@ def main():
             WARNING + "You chose to not use any cloud providers nor Docker, "
             "media files won't be served in production." + TERMINATOR
         )
+        remove_storages_module()
 
     if "{{ cookiecutter.use_celery }}".lower() == "n":
         remove_celery_files()

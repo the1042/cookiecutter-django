@@ -1,13 +1,11 @@
+from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
-from django.db.models import QuerySet
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
-from django.views.generic import DetailView
-from django.views.generic import RedirectView
-from django.views.generic import UpdateView
+from django.views.generic import DetailView, RedirectView, UpdateView
 
-from {{ cookiecutter.project_slug }}.users.models import User
+User = get_user_model()
 
 
 class UserDetailView(LoginRequiredMixin, DetailView):
@@ -29,12 +27,11 @@ class UserUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     fields = ["name"]
     success_message = _("Information successfully updated")
 
-    def get_success_url(self) -> str:
-        assert self.request.user.is_authenticated  # type guard
+    def get_success_url(self):
+        assert self.request.user.is_authenticated  # for mypy to know that the user is authenticated
         return self.request.user.get_absolute_url()
 
-    def get_object(self, queryset: QuerySet | None=None) -> User:
-        assert self.request.user.is_authenticated  # type guard
+    def get_object(self):
         return self.request.user
 
 
@@ -44,7 +41,7 @@ user_update_view = UserUpdateView.as_view()
 class UserRedirectView(LoginRequiredMixin, RedirectView):
     permanent = False
 
-    def get_redirect_url(self) -> str:
+    def get_redirect_url(self):
         {%- if cookiecutter.username_type == "email" %}
         return reverse("users:detail", kwargs={"pk": self.request.user.pk})
         {%- else %}

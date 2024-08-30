@@ -1,7 +1,8 @@
+version: '3'
+
 volumes:
   {{ cookiecutter.project_slug }}_local_postgres_data: {}
   {{ cookiecutter.project_slug }}_local_postgres_data_backups: {}
-  {% if cookiecutter.use_celery == 'y' %}{{ cookiecutter.project_slug }}_local_redis_data: {}{% endif %}
 
 services:
   django:{% if cookiecutter.use_celery == 'y' %} &django{% endif %}
@@ -39,10 +40,25 @@ services:
     env_file:
       - ./.envs/.local/.postgres
 
+  docs:
+    image: {{ cookiecutter.project_slug }}_local_docs
+    container_name: {{ cookiecutter.project_slug }}_local_docs
+    build:
+      context: .
+      dockerfile: ./compose/local/docs/Dockerfile
+    env_file:
+      - ./.envs/.local/.django
+    volumes:
+      - ./docs:/docs:z
+      - ./config:/app/config:z
+      - ./{{ cookiecutter.project_slug }}:/app/{{ cookiecutter.project_slug }}:z
+    ports:
+      - '9000:9000'
+    command: /start-docs
   {%- if cookiecutter.use_mailpit == 'y' %}
 
   mailpit:
-    image: docker.io/axllent/mailpit:latest
+    image: axllent/mailpit:v1.8
     container_name: {{ cookiecutter.project_slug }}_local_mailpit
     ports:
       - "8025:8025"
@@ -51,12 +67,8 @@ services:
   {%- if cookiecutter.use_celery == 'y' %}
 
   redis:
-    image: docker.io/redis:6
+    image: redis:6
     container_name: {{ cookiecutter.project_slug }}_local_redis
-    {% if cookiecutter.use_celery == 'y' %}
-    volumes:
-      - {{ cookiecutter.project_slug }}_local_redis_data:/data
-    {% endif %}
 
   celeryworker:
     <<: *django

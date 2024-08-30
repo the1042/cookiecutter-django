@@ -1,5 +1,4 @@
 """Unit tests for the hooks"""
-
 import os
 from pathlib import Path
 

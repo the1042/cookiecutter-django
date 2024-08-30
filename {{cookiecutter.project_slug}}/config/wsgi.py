@@ -1,4 +1,3 @@
-# ruff: noqa
 """
 WSGI config for {{ cookiecutter.project_name }} project.
 
@@ -14,7 +13,6 @@ middleware here, or combine a Django application with an application of another
 framework.
 
 """
-
 import os
 import sys
 from pathlib import Path
