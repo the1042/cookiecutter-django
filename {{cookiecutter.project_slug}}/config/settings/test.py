@@ -2,8 +2,7 @@
 With these settings, tests run faster.
 """
 
-from .base import *  # noqa: F403
-from .base import TEMPLATES
+from .base import *  # noqa
 from .base import env
 
 # GENERAL
@@ -28,17 +27,17 @@ EMAIL_BACKEND = "django.core.mail.backends.locmem.EmailBackend"
 
 # DEBUGGING FOR TEMPLATES
 # ------------------------------------------------------------------------------
-TEMPLATES[0]["OPTIONS"]["debug"] = True  # type: ignore[index]
+TEMPLATES[0]["OPTIONS"]["debug"] = True  # type: ignore # noqa: F405
 
 # MEDIA
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#media-url
-MEDIA_URL = "http://media.testserver"
+MEDIA_URL = 'http://media.testserver'
 
 {%- if cookiecutter.frontend_pipeline == 'Webpack' %}
 # django-webpack-loader
 # ------------------------------------------------------------------------------
-WEBPACK_LOADER["DEFAULT"]["LOADER_CLASS"] = "webpack_loader.loaders.FakeWebpackLoader"  # noqa: F405
+WEBPACK_LOADER["DEFAULT"]["LOADER_CLASS"] = "webpack_loader.loader.FakeWebpackLoader"  # noqa: F405
 
 {%- endif %}
 # Your stuff...

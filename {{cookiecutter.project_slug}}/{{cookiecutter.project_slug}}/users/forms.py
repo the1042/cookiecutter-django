@@ -1,16 +1,17 @@
 from allauth.account.forms import SignupForm
 from allauth.socialaccount.forms import SignupForm as SocialSignupForm
 from django.contrib.auth import forms as admin_forms
+from django.contrib.auth import get_user_model
 {%- if cookiecutter.username_type == "email" %}
 from django.forms import EmailField
 {%- endif %}
 from django.utils.translation import gettext_lazy as _
 
-from .models import User
+User = get_user_model()
 
 
 class UserAdminChangeForm(admin_forms.UserChangeForm):
-    class Meta(admin_forms.UserChangeForm.Meta):  # type: ignore[name-defined]
+    class Meta(admin_forms.UserChangeForm.Meta):
         model = User
         {%- if cookiecutter.username_type == "email" %}
         field_classes = {"email": EmailField}
@@ -23,7 +24,7 @@ class UserAdminCreationForm(admin_forms.UserCreationForm):
     To change user signup, see UserSignupForm and UserSocialSignupForm.
     """
 
-    class Meta(admin_forms.UserCreationForm.Meta):  # type: ignore[name-defined]
+    class Meta(admin_forms.UserCreationForm.Meta):
         model = User
         {%- if cookiecutter.username_type == "email" %}
         fields = ("email",)
