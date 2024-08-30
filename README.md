@@ -6,7 +6,7 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
 [![Updates](https://pyup.io/repos/github/cookiecutter/cookiecutter-django/shield.svg)](https://pyup.io/repos/github/cookiecutter/cookiecutter-django/)
-[![Join our Discord](https://img.shields.io/badge/Discord-cookiecutter-5865F2?style=flat&logo=discord&logoColor=white)](https://discord.gg/uFXweDQc5a)
+[![Join our Discord](https://img.shields.io/badge/Discord-cookiecutter-5865F2?style=flat&logo=discord&logoColor=white)](https://discord.gg/rAWFUP47d2)
 [![Code Helpers Badge](https://www.codetriage.com/cookiecutter/cookiecutter-django/badges/users.svg)](https://www.codetriage.com/cookiecutter/cookiecutter-django)
 
 Powered by [Cookiecutter](https://github.com/cookiecutter/cookiecutter), Cookiecutter Django is a framework for jumpstarting
@@ -17,121 +17,10 @@ production-ready Django projects quickly.
 - If you have problems with Cookiecutter Django, please open [issues](https://github.com/cookiecutter/cookiecutter-django/issues/new) don't send
   emails to the maintainers.
 
-## Usage
-
-
-Repo:
-
-    cookiecutter https://github.com/the1042/cookiecutter-django --checkout 1042
-
-You'll be prompted for some values. Provide them, then a Django project will be created for you.
-
-Answer the prompts with your own desired [options](http://cookiecutter-django.readthedocs.io/en/latest/project-generation-options.html). For example:
-
-    Cloning into 'cookiecutter-django'...
-    remote: Counting objects: 550, done.
-    remote: Compressing objects: 100% (310/310), done.
-    remote: Total 550 (delta 283), reused 479 (delta 222)
-    Receiving objects: 100% (550/550), 127.66 KiB | 58 KiB/s, done.
-    Resolving deltas: 100% (283/283), done.
-    project_name [My Awesome Project]: Reddit Clone
-    project_slug [reddit_clone]: reddit
-    description [Behold My Awesome Project!]: A reddit clone.
-    author_name [the1042]: The 1042 Group, LLC
-    domain_name [example.com]: myreddit.com
-    email [code@the1042.com]: code@the1042.com
-    version [0.1.0]: 0.0.1
-    Select open_source_license:
-    1 - MIT
-    2 - BSD
-    3 - GPLv3
-    4 - Apache Software License 2.0
-    5 - Not open source
-    Choose from 1, 2, 3, 4, 5 [1]: 1
-    Select username_type:
-    1 - username
-    2 - email
-    Choose from 1, 2 [1]: 1
-    timezone [UTC]: America/Los_Angeles
-    windows [n]: n
-    Select an editor to use. The choices are:
-    1 - None
-    2 - PyCharm
-    3 - VS Code
-    Choose from 1, 2, 3 [1]: 1
-    use_docker [n]: n
-    Select postgresql_version:
-    1 - 15
-    2 - 14
-    3 - 13
-    4 - 12
-    5 - 11
-    6 - 10
-    Choose from 1, 2, 3, 4, 5 [1]: 1
-    Select cloud_provider:
-    1 - AWS
-    2 - GCP
-    3 - None
-    Choose from 1, 2, 3 [1]: 1
-    Select mail_service:
-    1 - Mailgun
-    2 - Amazon SES
-    3 - Mailjet
-    4 - Mandrill
-    5 - Postmark
-    6 - Sendgrid
-    7 - SendinBlue
-    8 - SparkPost
-    9 - Other SMTP
-    Choose from 1, 2, 3, 4, 5, 6, 7, 8, 9 [1]: 1
-    use_async [n]: n
-    use_drf [n]: y
-    Select frontend_pipeline:
-    1 - None
-    2 - Django Compressor
-    3 - Gulp
-    4 - Webpack
-    Choose from 1, 2, 3, 4 [1]: 1
-    use_celery [n]: y
-    use_mailpit [n]: n
-    use_sentry [n]: y
-    use_whitenoise [n]: n
-    use_heroku [n]: y
-    Select ci_tool:
-    1 - None
-    2 - Travis
-    3 - Gitlab
-    4 - Github
-    Choose from 1, 2, 3, 4 [1]: 4
-    keep_local_envs_in_vcs [y]: y
-    debug [n]: n
-
-Enter the project and take a look around:
-
-    $ cd
-    $ ls
-
-Create a git repo and push it there:
-
-    $ git init
-    $ git add .
-    $ git commit -m "first commit"
-    $ git remote add origin git@github.com:the1042/
-    $ git push -u origin master
-
-Now take a look at your repo. Don't forget to carefully look at the generated README. Awesome, right?
-
-For local development, see the following:
-
-- [Developing locally](http://cookiecutter-django.readthedocs.io/en/latest/developing-locally.html)
-- [Developing locally using docker](http://cookiecutter-django.readthedocs.io/en/latest/developing-locally-docker.html)
-
-
-
 ## Features
 
-- For Django 4.2
-- Works with Python 3.11
+- For Django 5.0
+- Works with Python 3.12
 - Renders Django projects with 100% starting test coverage
 - Twitter [Bootstrap](https://github.com/twbs/bootstrap) v5
 - [12-Factor](https://12factor.net) based settings via [django-environ](https://github.com/joke2k/django-environ)
@@ -162,7 +51,7 @@ _These features can be enabled during initial project setup._
 ## Constraints
 
 - Only maintained 3rd party libraries are used.
-- Uses PostgreSQL everywhere: 10 - 15 ([MySQL fork](https://github.com/mabdullahadeel/cookiecutter-django-mysql) also available).
+- Uses PostgreSQL everywhere: 12 - 16 ([MySQL fork](https://github.com/mabdullahadeel/cookiecutter-django-mysql) also available).
 - Environment variables for configuration (This won't work with Apache/mod_wsgi).
 
 ## Support this Project!
@@ -176,21 +65,133 @@ This project is an open source project run by volunteers. You can sponsor us via
 
 Projects that provide financial support to the maintainers:
 
----
+### Two Scoops of Django
 
-<p align="center">
-  <a href="https://www.feldroy.com/products//two-scoops-of-django-3-x"><img src="https://cdn.shopify.com/s/files/1/0304/6901/products/Two-Scoops-of-Django-3-Alpha-Cover_540x_26507b15-e489-470b-8a97-02773dd498d1_1080x.jpg"></a>
-</p>
+[![Cover of the book "Two Scoops of Django 3.x"](https://f004.backblazeb2.com/file/feldroycom/images/book-TSD3-800.jpg)](https://www.feldroy.com/two-scoops-press#two-scoops-of-django)
 
 Two Scoops of Django 3.x is the best ice cream-themed Django reference in the universe!
 
 ### PyUp
 
-<p align="center">
-  <a href="https://pyup.io/"><img src="https://pyup.io/static/images/logo.png"></a>
-</p>
+[![PyUp Logo](https://pyup.io/static/images/logo.png)](https://pyup.io)
 
 PyUp brings you automated security and dependency updates used by Google and other organizations. Free for open source projects!
+
+## Usage
+
+Let's pretend you want to create a Django project called "redditclone". Rather than using `startproject`
+and then editing the results to include your name, email, and various configuration issues that always get forgotten until the worst possible moment, get [cookiecutter](https://github.com/cookiecutter/cookiecutter) to do all the work.
+
+First, get Cookiecutter. Trust me, it's awesome:
+
+    $ pip install "cookiecutter>=1.7.0"
+
+Now run it against this repo:
+
+    $ cookiecutter https://github.com/cookiecutter/cookiecutter-django
+
+You'll be prompted for some values. Provide them, then a Django project will be created for you.
+
+**Warning**: After this point, change 'Daniel Greenfeld', 'pydanny', etc to your own information.
+
+Answer the prompts with your own desired [options](http://cookiecutter-django.readthedocs.io/en/latest/project-generation-options.html). For example:
+
+    Cloning into 'cookiecutter-django'...
+    remote: Counting objects: 550, done.
+    remote: Compressing objects: 100% (310/310), done.
+    remote: Total 550 (delta 283), reused 479 (delta 222)
+    Receiving objects: 100% (550/550), 127.66 KiB | 58 KiB/s, done.
+    Resolving deltas: 100% (283/283), done.
+    project_name [My Awesome Project]: Reddit Clone
+    project_slug [reddit_clone]: reddit
+    description [Behold My Awesome Project!]: A reddit clone.
+    author_name [Daniel Roy Greenfeld]: Daniel Greenfeld
+    domain_name [example.com]: myreddit.com
+    email [daniel-greenfeld@example.com]: pydanny@gmail.com
+    version [0.1.0]: 0.0.1
+    Select open_source_license:
+    1 - MIT
+    2 - BSD
+    3 - GPLv3
+    4 - Apache Software License 2.0
+    5 - Not open source
+    Choose from 1, 2, 3, 4, 5 [1]: 1
+    Select username_type:
+    1 - username
+    2 - email
+    Choose from 1, 2 [1]: 1
+    timezone [UTC]: America/Los_Angeles
+    windows [n]: n
+    Select an editor to use. The choices are:
+    1 - None
+    2 - PyCharm
+    3 - VS Code
+    Choose from 1, 2, 3 [1]: 1
+    use_docker [n]: n
+    Select postgresql_version:
+    1 - 16
+    2 - 15
+    3 - 14
+    4 - 13
+    5 - 12
+    Choose from 1, 2, 3, 4, 5 [1]: 1
+    Select cloud_provider:
+    1 - AWS
+    2 - GCP
+    3 - None
+    Choose from 1, 2, 3 [1]: 1
+    Select mail_service:
+    1 - Mailgun
+    2 - Amazon SES
+    3 - Mailjet
+    4 - Mandrill
+    5 - Postmark
+    6 - Sendgrid
+    7 - Brevo (formerly SendinBlue)
+    8 - SparkPost
+    9 - Other SMTP
+    Choose from 1, 2, 3, 4, 5, 6, 7, 8, 9 [1]: 1
+    use_async [n]: n
+    use_drf [n]: y
+    Select frontend_pipeline:
+    1 - None
+    2 - Django Compressor
+    3 - Gulp
+    4 - Webpack
+    Choose from 1, 2, 3, 4 [1]: 1
+    use_celery [n]: y
+    use_mailpit [n]: n
+    use_sentry [n]: y
+    use_whitenoise [n]: n
+    use_heroku [n]: y
+    Select ci_tool:
+    1 - None
+    2 - Travis
+    3 - Gitlab
+    4 - Github
+    Choose from 1, 2, 3, 4 [1]: 4
+    keep_local_envs_in_vcs [y]: y
+    debug [n]: n
+
+Enter the project and take a look around:
+
+    $ cd reddit/
+    $ ls
+
+Create a git repo and push it there:
+
+    $ git init
+    $ git add .
+    $ git commit -m "first awesome commit"
+    $ git remote add origin git@github.com:pydanny/redditclone.git
+    $ git push -u origin master
+
+Now take a look at your repo. Don't forget to carefully look at the generated README. Awesome, right?
+
+For local development, see the following:
+
+- [Developing locally](http://cookiecutter-django.readthedocs.io/en/latest/developing-locally.html)
+- [Developing locally using docker](http://cookiecutter-django.readthedocs.io/en/latest/developing-locally-docker.html)
 
 ## Community
 
@@ -243,6 +244,7 @@ experience better.
 
 ## Articles
 
+- [Why cookiecutter-django is Essential for Your Next Django Project](https://medium.com/@millsks/why-cookiecutter-django-is-essential-for-your-next-django-project-7d3c00cdce51) - Aug. 4, 2024
 - [How to Make Your Own Django Cookiecutter Template!](https://medium.com/@FatemeFouladkar/how-to-make-your-own-django-cookiecutter-template-a753d4cbb8c2) - Aug. 10, 2023
 - [Cookiecutter Django With Amazon RDS](https://haseeburrehman.com/posts/cookiecutter-django-with-amazon-rds/) - Apr, 2, 2021
 - [Complete Walkthrough: Blue/Green Deployment to AWS ECS using GitHub actions](https://github.com/Andrew-Chen-Wang/cookiecutter-django-ecs-github) - June 10, 2020
