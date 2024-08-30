@@ -15,6 +15,10 @@ from drf_spectacular.views import SpectacularSwaggerView
 from rest_framework.authtoken.views import obtain_auth_token
 {%- endif %}
 
+admin.site.site_header = "{{ cookiecutter.project_name }} Admin"
+admin.site.site_title = "{{ cookiecutter.project_name }} Admin Portal"
+# admin.site.index_title = "Welcome to {{ cookiecutter.project_name }} Admin Portal"
+
 urlpatterns = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
     path(
