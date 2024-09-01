@@ -17,8 +17,8 @@
   "timezone": ["UTC", "America/New_York"],
   "windows": "n",
   "editor": ["None", "PyCharm", "VS Code"],
-  "use_docker": "n",
-  "postgresql_version": ["16", "15", "14", "13", "12"],
+  "use_docker": "y",
+  "postgresql_version": ["15", "14", "13", "12", "11", "10"],
   "cloud_provider": ["AWS", "GCP", "Azure", "None"],
   "mail_service": [
     "Mailgun",
@@ -27,7 +27,7 @@
     "Mandrill",
     "Postmark",
     "Sendgrid",
-    "Brevo",
+    "SendinBlue",
     "SparkPost",
     "Other SMTP"
   ],

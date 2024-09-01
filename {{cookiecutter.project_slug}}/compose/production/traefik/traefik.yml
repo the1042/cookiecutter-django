@@ -6,7 +6,7 @@ entryPoints:
     # http
     address: ':80'
     http:
-      # https://doc.traefik.io/traefik/routing/entrypoints/#entrypoint
+      # https://docs.traefik.io/routing/entrypoints/#entrypoint
       redirections:
         entryPoint:
           to: web-secure
@@ -22,11 +22,11 @@ entryPoints:
 
 certificatesResolvers:
   letsencrypt:
-    # https://doc.traefik.io/traefik/https/acme/#lets-encrypt
+    # https://docs.traefik.io/master/https/acme/#lets-encrypt
     acme:
       email: '{{ cookiecutter.email }}'
       storage: /etc/traefik/acme/acme.json
-      # https://doc.traefik.io/traefik/https/acme/#httpchallenge
+      # https://docs.traefik.io/master/https/acme/#httpchallenge
       httpChallenge:
         entryPoint: web
 
@@ -44,7 +44,7 @@ http:
         - csrf
       service: django
       tls:
-        # https://doc.traefik.io/traefik/routing/routers/#certresolver
+        # https://docs.traefik.io/master/routing/routers/#certresolver
         certResolver: letsencrypt
     {%- if cookiecutter.use_celery == 'y' %}
 
@@ -54,7 +54,7 @@ http:
         - flower
       service: flower
       tls:
-        # https://doc.traefik.io/traefik/master/routing/routers/#certresolver
+        # https://docs.traefik.io/master/routing/routers/#certresolver
         certResolver: letsencrypt
     {%- endif %}
     {%- if cookiecutter.cloud_provider == 'None' %}
@@ -76,7 +76,7 @@ http:
 
   middlewares:
     csrf:
-      # https://doc.traefik.io/traefik/master/middlewares/http/headers/#hostsproxyheaders
+      # https://docs.traefik.io/master/middlewares/headers/#hostsproxyheaders
       # https://docs.djangoproject.com/en/dev/ref/csrf/#ajax
       headers:
         hostsProxyHeaders: ['X-CSRFToken']
@@ -102,7 +102,7 @@ http:
     {%- endif %}
 
 providers:
-  # https://doc.traefik.io/traefik/master/providers/file/
+  # https://docs.traefik.io/master/providers/file/
   file:
     filename: /etc/traefik/traefik.yml
     watch: true
