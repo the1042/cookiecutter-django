@@ -59,9 +59,6 @@ docs/_build/
 # PyBuilder
 target/
 
-# pyenv
-.python-version
-
 {% if cookiecutter.use_celery == 'y' -%}
 # celery beat schedule file
 celerybeat-schedule
@@ -161,11 +158,10 @@ typings/
 !.vscode/extensions.json
 *.code-workspace
 
-# Local History for Visual Studio Code
-.history/
+# Local History for devcontainer
+.devcontainer/bash_history
 
-
-{% if cookiecutter.use_pycharm == 'y' -%}
+{% if cookiecutter.editor == 'PyCharm' -%}
 # Provided default Pycharm Run/Debug Configurations should be tracked by git
 # In case of local modifications made by Pycharm, use update-index command
 # for each changed file, like this:
@@ -330,8 +326,8 @@ tags
 dump.rdb
 
 ### Project template
-{%- if cookiecutter.use_mailhog == 'y' and cookiecutter.use_docker == 'n' %}
-MailHog
+{%- if cookiecutter.use_mailpit == 'y' and cookiecutter.use_docker == 'n' %}
+mailpit
 {%- endif %}
 {{ cookiecutter.project_slug }}/media/
 

@@ -6,12 +6,12 @@ patches, only comparing major and minor version numbers.
 This script handles when there are multiple Django versions that need
 to keep up to date.
 """
+
 from __future__ import annotations
 
 import os
 import re
 import sys
-from collections.abc import Iterable
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, NamedTuple
 
@@ -19,6 +19,8 @@ import requests
 from github import Github
 
 if TYPE_CHECKING:
+    from collections.abc import Iterable
+
     from github.Issue import Issue
 
 CURRENT_FILE = Path(__file__)
@@ -82,7 +84,7 @@ def get_name_and_version(requirements_line: str) -> tuple[str, ...]:
 
 
 def get_all_latest_django_versions(
-    django_max_version: tuple[DjVersion] = None,
+    django_max_version: tuple[DjVersion] | None = None,
 ) -> tuple[DjVersion, list[DjVersion]]:
     """
     Grabs all Django versions that are worthy of a GitHub issue.
@@ -182,9 +184,8 @@ class GitHubManager:
             if not matches:
                 continue
             issue_version = DjVersion.parse(matches.group(1))
-            if self.base_dj_version > issue_version:
-                issue.edit(state="closed")
-                print(f"Closed issue {issue.title} (ID: [{issue.id}]({issue.url}))")
+            if self.base_dj_version >= issue_version:
+                self.close_issue(issue)
             else:
                 self.existing_issues[issue_version] = issue
 
@@ -213,7 +214,7 @@ class GitHubManager:
         for classifier in package_info["info"]["classifiers"]:
             # Usually in the form of "Framework :: Django :: 3.2"
             tokens = classifier.split(" ")
-            if len(tokens) >= 5 and tokens[2].lower() == "django":
+            if len(tokens) >= 5 and tokens[2].lower() == "django" and "." in tokens[4]:
                 version = DjVersion.parse(tokens[4])
                 if len(version) == 2:
                     supported_dj_versions.append(version)
@@ -221,8 +222,7 @@ class GitHubManager:
         if supported_dj_versions:
             if any(v >= needed_dj_version for v in supported_dj_versions):
                 return package_info["info"]["version"], "✅"
-            else:
-                return "", "❌"
+            return "", "❌"
 
         # Django classifier DNE; assume it isn't a Django lib
         # Great exceptions include pylint-django, where we need to do this manually...
@@ -269,6 +269,11 @@ class GitHubManager:
             issue = self.repo.create_issue(f"[Update Django] Django {needed_dj_version}", description)
             issue.add_to_labels(f"django{needed_dj_version}")
 
+    @staticmethod
+    def close_issue(issue: Issue):
+        issue.edit(state="closed")
+        print(f"Closed issue {issue.title} (ID: [{issue.id}]({issue.url}))")
+
     def generate(self):
         for version in self.needed_dj_versions:
             print(f"Handling GitHub issue for Django {version}")
@@ -280,10 +285,15 @@ class GitHubManager:
 def main(django_max_version=None) -> None:
     # Check if there are any djs
     current_dj, latest_djs = get_all_latest_django_versions(django_max_version=django_max_version)
-    if not latest_djs:
-        sys.exit(0)
+
+    # Run the setup, which might close old issues
     manager = GitHubManager(current_dj, latest_djs)
     manager.setup()
+
+    if not latest_djs:
+        print("No new Django versions to update. Exiting...")
+        sys.exit(0)
+
     manager.generate()
 
 

@@ -6,6 +6,7 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
 [![Updates](https://pyup.io/repos/github/cookiecutter/cookiecutter-django/shield.svg)](https://pyup.io/repos/github/cookiecutter/cookiecutter-django/)
+[![Join our Discord](https://img.shields.io/badge/Discord-cookiecutter-5865F2?style=flat&logo=discord&logoColor=white)](https://discord.gg/rAWFUP47d2)
 [![Join our Discord](https://img.shields.io/badge/Discord-cookiecutter-5865F2?style=flat&logo=discord&logoColor=white)](https://discord.gg/9BrxzPKuEW)
 [![Code Helpers Badge](https://www.codetriage.com/cookiecutter/cookiecutter-django/badges/users.svg)](https://www.codetriage.com/cookiecutter/cookiecutter-django)
 
@@ -13,17 +14,17 @@ Powered by [Cookiecutter](https://github.com/cookiecutter/cookiecutter), Cookiec
 production-ready Django projects quickly.
 
 - Documentation: <https://cookiecutter-django.readthedocs.io/en/latest/>
-- See [Troubleshooting](https://cookiecutter-django.readthedocs.io/en/latest/troubleshooting.html) for common errors and obstacles
+- See [Troubleshooting](https://cookiecutter-django.readthedocs.io/en/latest/5-help/troubleshooting.html) for common errors and obstacles
 - If you have problems with Cookiecutter Django, please open [issues](https://github.com/cookiecutter/cookiecutter-django/issues/new) don't send
   emails to the maintainers.
 
 ## Features
 
-- For Django 4.2
-- Works with Python 3.11
+- For Django 5.0
+- Works with Python 3.12
 - Renders Django projects with 100% starting test coverage
 - Twitter [Bootstrap](https://github.com/twbs/bootstrap) v5
-- [12-Factor](http://12factor.net/) based settings via [django-environ](https://github.com/joke2k/django-environ)
+- [12-Factor](https://12factor.net) based settings via [django-environ](https://github.com/joke2k/django-environ)
 - Secure by default. We believe in SSL.
 - Optimized development and production settings
 - Registration via [django-allauth](https://github.com/pennersr/django-allauth)
@@ -45,13 +46,13 @@ _These features can be enabled during initial project setup._
 
 - Serve static files from Amazon S3, Google Cloud Storage, Azure Storage or [Whitenoise](https://whitenoise.readthedocs.io/)
 - Configuration for [Celery](https://docs.celeryq.dev) and [Flower](https://github.com/mher/flower) (the latter in Docker setup only)
-- Integration with [MailHog](https://github.com/mailhog/MailHog) for local email testing
+- Integration with [Mailpit](https://github.com/axllent/mailpit/) for local email testing
 - Integration with [Sentry](https://sentry.io/welcome/) for error logging
 
 ## Constraints
 
 - Only maintained 3rd party libraries are used.
-- Uses PostgreSQL everywhere: 10.19 - 14.1 ([MySQL fork](https://github.com/mabdullahadeel/cookiecutter-django-mysql) also available).
+- Uses PostgreSQL everywhere: 12 - 16 ([MySQL fork](https://github.com/mabdullahadeel/cookiecutter-django-mysql) also available).
 - Environment variables for configuration (This won't work with Apache/mod_wsgi).
 
 ## Support this Project!
@@ -65,13 +66,15 @@ This project is an open source project run by volunteers. You can sponsor us via
 
 Projects that provide financial support to the maintainers:
 
----
+### Two Scoops of Django
+
+[![Cover of the book "Two Scoops of Django 3.x"](https://f004.backblazeb2.com/file/feldroycom/images/book-TSD3-800.jpg)](https://www.feldroy.com/two-scoops-press#two-scoops-of-django)
+
+Two Scoops of Django 3.x is the best ice cream-themed Django reference in the universe!
 
 ### PyUp
 
-<p align="center">
-  <a href="https://pyup.io/">PyUp</a>
-</p>
+[![PyUp Logo](https://pyup.io/static/images/logo.png)](https://pyup.io)
 
 PyUp brings you automated security and dependency updates used by Google and other organizations. Free for open source projects!
 
@@ -91,7 +94,7 @@ Now run it against this repo:
 You'll be prompted for some values. Provide them, then a Django project will be created for you.
 
 
-Answer the prompts with your own desired [options](http://cookiecutter-django.readthedocs.io/en/latest/project-generation-options.html). For example:
+Answer the prompts with your own desired [options](http://cookiecutter-django.readthedocs.io/en/latest/1-getting-started/project-generation-options.html). For example:
 
     Cloning into 'cookiecutter-django'...
     remote: Counting objects: 550, done.
@@ -119,14 +122,18 @@ Answer the prompts with your own desired [options](http://cookiecutter-django.re
     Choose from 1, 2 [1]: 1
     timezone [UTC]: America/New_York
     windows [n]: n
-    use_pycharm [n]: n
-    use_docker [y]: y
+    Select an editor to use. The choices are:
+    1 - None
+    2 - PyCharm
+    3 - VS Code
+    Choose from 1, 2, 3 [1]: 1
+    use_docker [n]: n
     Select postgresql_version:
-    1 - 14
-    2 - 13
-    3 - 12
-    4 - 11
-    5 - 10
+    1 - 16
+    2 - 15
+    3 - 14
+    4 - 13
+    5 - 12
     Choose from 1, 2, 3, 4, 5 [1]: 1
     Select cloud_provider:
     1 - AWS
@@ -140,7 +147,7 @@ Answer the prompts with your own desired [options](http://cookiecutter-django.re
     4 - Mandrill
     5 - Postmark
     6 - Sendgrid
-    7 - SendinBlue
+    7 - Brevo (formerly SendinBlue)
     8 - SparkPost
     9 - Other SMTP
     Choose from 1, 2, 3, 4, 5, 6, 7, 8, 9 [1]: 1
@@ -152,11 +159,11 @@ Answer the prompts with your own desired [options](http://cookiecutter-django.re
     3 - Gulp
     4 - Webpack
     Choose from 1, 2, 3, 4 [1]: 1
-    use_celery [n]: n
-    use_mailhog [n]: y
-    use_sentry [n]: n
-    use_whitenoise [n]: y
-    use_heroku [n]: n
+    use_celery [n]: y
+    use_mailpit [n]: n
+    use_sentry [n]: y
+    use_whitenoise [n]: n
+    use_heroku [n]: y
     Select ci_tool:
     1 - None
     2 - Travis
@@ -183,14 +190,16 @@ Now take a look at your repo. Don't forget to carefully look at the generated RE
 
 For local development, see the following:
 
-- [Developing locally](http://cookiecutter-django.readthedocs.io/en/latest/developing-locally.html)
-- [Developing locally using docker](http://cookiecutter-django.readthedocs.io/en/latest/developing-locally-docker.html)
+- [Developing locally](https://cookiecutter-django.readthedocs.io/en/latest/2-local-development/developing-locally.html)
+- [Developing locally using docker](https://cookiecutter-django.readthedocs.io/en/latest/2-local-development/developing-locally-docker.html)
 
 ## Community
 
 - Have questions? **Before you ask questions anywhere else**, please post your question on [Stack Overflow](http://stackoverflow.com/questions/tagged/cookiecutter-django) under the _cookiecutter-django_ tag. We check there periodically for questions.
 - If you think you found a bug or want to request a feature, please open an [issue](https://github.com/cookiecutter/cookiecutter-django/issues).
 - For anything else, you can chat with us on [Discord](https://discord.gg/uFXweDQc5a).
+
+<img src="https://opencollective.com/cookiecutter-django/contributors.svg?width=890&button=false" alt="Contributors">
 
 ## For Readers of Two Scoops of Django
 
@@ -235,6 +244,8 @@ experience better.
 
 ## Articles
 
+- [Why cookiecutter-django is Essential for Your Next Django Project](https://medium.com/@millsks/why-cookiecutter-django-is-essential-for-your-next-django-project-7d3c00cdce51) - Aug. 4, 2024
+- [How to Make Your Own Django Cookiecutter Template!](https://medium.com/@FatemeFouladkar/how-to-make-your-own-django-cookiecutter-template-a753d4cbb8c2) - Aug. 10, 2023
 - [Cookiecutter Django With Amazon RDS](https://haseeburrehman.com/posts/cookiecutter-django-with-amazon-rds/) - Apr, 2, 2021
 - [Complete Walkthrough: Blue/Green Deployment to AWS ECS using GitHub actions](https://github.com/Andrew-Chen-Wang/cookiecutter-django-ecs-github) - June 10, 2020
 - [Using cookiecutter-django with Google Cloud Storage](https://ahhda.github.io/cloud/gce/django/2019/03/12/using-django-cookiecutter-cloud-storage.html) - Mar. 12, 2019

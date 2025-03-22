@@ -18,39 +18,26 @@ This last step is very important, don't start developing from master, it'll caus
 
 ## Testing
 
-You'll need to run the tests using Python 3.11. We recommend using [tox](https://tox.readthedocs.io/en/latest/) to run the tests. It will automatically create a fresh virtual environment and install our test dependencies, such as [pytest-cookies](https://pypi.python.org/pypi/pytest-cookies/) and [flake8](https://pypi.python.org/pypi/flake8/).
+You'll need to run the tests using Python 3.12. We recommend using [tox](https://tox.readthedocs.io/en/latest/) to run the tests. It will automatically create a fresh virtual environment and install our test dependencies, such as [pytest-cookies](https://pypi.python.org/pypi/pytest-cookies/) and [flake8](https://pypi.python.org/pypi/flake8/).
 
 We'll also run the tests on GitHub actions when you send your pull request, but it's a good idea to run them locally before you send it.
 
 ### Installation
 
-First, make sure that your version of Python is 3.11:
-
-```bash
-$ python --version
-Python 3.11.3
-```
-
-Any version that starts with 3.11 will do. If you need to install it, you can get it from [python.org](https://www.python.org/downloads/).
-
-Then install `tox`, if not already installed:
-
-```bash
-$ python -m pip install tox
-```
+We use uv to manage our environment and manage our Python installation. You can install it following the instructions at https://docs.astral.sh/uv/getting-started/installation/
 
 ### Run the template's test suite
 
 To run the tests of the template using the current Python version:
 
 ```bash
-$ tox -e py
+$ uv run tox run -e py
 ```
 
 This uses `pytest `under the hood, and you can pass options to it after a `--`. So to run a particular test:
 
 ```bash
-$ tox -e py -- -k test_default_configuration
+$ uv run tox run -e py -- -k test_default_configuration
 ```
 
 For further information, please consult the [pytest usage docs](https://pytest.org/en/latest/how-to/usage.html#specifying-which-tests-to-run).
@@ -66,13 +53,13 @@ $ source venv/bin/activate
 
 These tests are slower and can be run with or without Docker:
 
-- Without Docker: `scripts/test_bare.sh` (for bare metal)
-- With Docker: `scripts/test_docker.sh`
+- Without Docker: `tests/test_bare.sh` (for bare metal)
+- With Docker: `tests/test_docker.sh`
 
 All arguments to these scripts will be passed to the `cookiecutter` CLI, letting you set options, for example:
 
 ```bash
-$ scripts/test_bare.sh use_celery=y
+$ tests/test_bare.sh use_celery=y
 ```
 
 ## Submitting a pull request
