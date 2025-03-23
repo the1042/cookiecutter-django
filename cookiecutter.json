@@ -4,6 +4,7 @@
   "description": "Behold My Awesome Project!",
   "author_name": "The 1042 Group, LLC",
   "domain_name": "the1042.com",
+  "dev_domain_name": "the1042.local",
   "email": "code@the1042.com",
   "version": "0.1.0",
   "open_source_license": [
