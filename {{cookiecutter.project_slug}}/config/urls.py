@@ -15,12 +15,7 @@ from rest_framework.authtoken.views import obtain_auth_token
 {%- endif %}
 
 urlpatterns = [
-    path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
-    path(
-        "about/",
-        TemplateView.as_view(template_name="pages/about.html"),
-        name="about",
-    ),
+    path("", include("{{ cookiecutter.project_slug }}.pages.urls")),
     # Django Admin, use {% raw %}{% url 'admin:index' %}{% endraw %}
     path(settings.ADMIN_URL, admin.site.urls),
     # User management
